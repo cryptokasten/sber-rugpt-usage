@@ -1,0 +1,48 @@
+#+TITLE: Sberbank RuGPT usage
+#+TAGS: cryptokasten, gpt-3, sberbank, rugpt, ai, nlp, natural-language-processing, text-generation
+#+PROPERTY: header-args :session *shell sber-rugpt-usage* :results silent raw
+#+OPTIONS: ^:nil
+
+[[https://github.com/cryptokasten][file:https://img.shields.io/badge/dynamic/json.svg?url=https://api.github.com/users/cryptokasten&label=Cryptokasten&query=$.public_repos]]
+
+Examples of Sberbank ruGPTs usage.
+
+** Development environment
+
+Base docker image: [[https://github.com/cryptokasten/sber-ru-gpt-env][cryptokasten/sber-ru-gpt-env]] 
+
+#+BEGIN_SRC sh
+docker pull cryptokasten/sber-ru-gpt-env
+#+END_SRC
+
+#+BEGIN_SRC sh
+docker run --rm -it \
+  -v $TMPDIR:$TMPDIR  \
+  cryptokasten/sber-ru-gpt-env bash
+#+END_SRC
+
+** Code
+
+*** Run ruGPT2Large text generation.
+
+#+BEGIN_SRC sh
+bash ./scripts/generate_ruGPT2Large.sh
+#+END_SRC
+
+*** Run ruGPT3Medium text generation.
+
+#+BEGIN_SRC sh
+bash ./scripts/generate_ruGPT3Medium.sh
+#+END_SRC
+
+*** Run ruGPT3Large text generation.
+
+#+BEGIN_SRC sh
+bash ./scripts/generate_ruGPT3Large.sh
+#+END_SRC
+
+** References
+
+1. https://github.com/sberbank-ai/ru-gpts
+
+2. https://habr.com/ru/company/sberbank/blog/524522/
